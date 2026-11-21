@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+\usepackage{graphicx,url}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{booktabs}
+
+\sloppy
+
+\title{Provisionamento e Operação de Infraestrutura para Computação\\
+Confidencial Aplicada a LLMs: uma Revisão da Literatura}
+
+\author{Raisson Adrian Grangeiro Souto\inst{1}}
+
+\address{Programa de Pós-Graduação em Ciência da Computação (PPGCC)\\
+  Universidade Federal de Campina Grande (UFCG) -- Campina Grande, PB -- Brasil
+  \email{raisson.souto@copin.ufcg.edu.br}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  % TODO: abstract em inglês (máx. 10 linhas).
+\end{abstract}
+
+\begin{resumo}
+  % TODO: resumo em português (máx. 10 linhas). Escrever por último.
+\end{resumo}
+
+\section{Introdução}\label{sec:intro}
+% Contexto: LLMs como serviço multi-tenant expõem pesos, prompts e saídas.
+% Problema: TEEs (SGX, TDX, SEV-SNP, GPUs confidenciais) deslocam a
+%   complexidade para provisionamento e operação.
+% Objetivo e questões de pesquisa (QP1--QP3).
+% Contribuições e organização do artigo.
+
+\section{Fundamentação Teórica}\label{sec:fundamentacao}
+
+\subsection{Trusted Execution Environments}
+% Enclave (SGX) vs. VM confidencial (TDX, SEV-SNP); unidade de isolamento.
+
+\subsection{Attestation Remota}
+% Modelo RATS (Attester, Verifier, Relying Party); liberação de segredos.
+
+\subsection{Orquestração de Cargas Confidenciais}
+% Confidential Containers (Kata + Trustee/KBS); ofertas gerenciadas.
+
+\subsection{GPUs Confidenciais e Inferência de LLMs}
+% H100/H200 CC mode; extensão da fronteira de confiança.
+
+\section{Metodologia}\label{sec:metodologia}
+% Questões de pesquisa; bases (arXiv, ACM DL, IEEE Xplore, USENIX);
+% strings de busca; critérios de inclusão/exclusão (2022--2026);
+% processo de seleção (n encontrados -> n incluídos); eixos de análise.
+
+\section{Resultados e Discussão}\label{sec:resultados}
+
+\subsection{Eixo 1: Provisionamento de VMs e Containers Confidenciais}
+% \cite{misono2024cvms}, \cite{confk8s2025mdpi}, \cite{c8s2026},
+% \cite{teecontainers2025trust}
+
+\subsection{Eixo 2: Attestation Remota e Automação de Políticas}
+% \cite{narayanan2023evtpm}, \cite{snpguard2024}, \cite{sokattest2025},
+% \cite{paju2023sok}, \cite{geppert2022tee}
+
+\subsection{Eixo 3: Computação Confidencial para LLMs e GPUs}
+% \cite{chrapek2025confllm}, \cite{zhu2024h100}, \cite{wang2024cpugpu},
+% \cite{forough2026agents}, \cite{edgecloud2023ml}
+
+\subsection{Análise Crítica e Lacunas}
+% Tabela comparativa dos trabalhos (Tab.~\ref{tab:comparacao}).
+% Lacunas: orquestração heterogênea em escala de fleet; CI/CD para builds
+% atestáveis; observabilidade sob TEE.
+
+\begin{table}[ht]
+\centering
+\caption{Comparação dos trabalhos revisados.}\label{tab:comparacao}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Trabalho & Eixo & TEE & Contribuição \\
+\midrule
+% TODO
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Ameaças à Validade}
+% Viés de seleção, predominância de preprints, recorte temporal.
+
+\section{Conclusão}\label{sec:conclusao}
+% Síntese, resposta às QPs, trabalhos futuros (orquestração attestation-aware).
+
+\bibliographystyle{sbc}
+\bibliography{references}
+
+\end{document}
